@@ -1,0 +1,285 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+}
+:root{
+    --main-text-color: #fff;
+}
+
+body{
+    background: url(/image/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    /* padding: .7em 0; */
+}
+
+/* nav bar */
+.navbar{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+nav{
+    padding: 5px 20px;
+}
+ul{
+    list-style-type: none;
+}
+.logo a,.item a{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+.logo1 {
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 4px;
+}
+
+.menu li{
+    font-size:23px;
+    padding: 15px 15px;
+    
+}
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 30px;
+}
+.toggle a{
+    font-size: 20px;
+}
+
+
+/* mobile menu */
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.toggle{
+    order:1;
+}
+.item.button{
+    order:2;
+}
+.item{
+    width: 100%;
+    text-align:center;
+    order:3;
+    display: none;
+}
+.item.active {
+    display: block;
+    background: url(/image/background1.jpg);
+}
+
+.toggle{
+    cursor: pointer;
+}
+.bars{
+    background: #999999;
+    display:inline-block;
+    height:2px;
+    position:relative;
+    width: 18px;
+}
+.bars::before,.bars::after{
+    background: #999999;
+    content: '';
+    display:block;
+    height:2px;
+    position: absolute;
+    width: 18px;
+}
+.bars::before{
+    top:5px;
+}
+.bars::after{
+    top:-5px;
+}
+
+
+
+/* table menu */
+@media all and (min-width:468px){
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order:1;
+        display: block;
+    }
+    .toggle{
+        order:2;
+    }
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width:auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order:0;
+    }
+    .item{
+        order:1;
+    }
+    .button{
+        order:2;
+    }
+    .menu li{
+        padding: 15px 10px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
+
+/* about */
+.about{
+    position:absolute;
+    z-index: -1;
+    top: 10%;
+}
+.content1{
+    color: var(--main-text-color);
+    text-align:center;
+    font-size: 2.2em;
+    margin-top: 20px;
+}
+
+.container{
+    display: flex;
+    font-family: initial;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.left-box{
+    color: var(--main-text-color);
+    width: 30%;
+    }
+.right-box{
+    color: var(--main-text-color);
+    width: 30%;
+}
+
+
+
+.left-box h2{
+    letter-spacing: 0.25rem;
+    font-size: 1.8em;
+    color:rgb(111, 156, 163);
+    font-family: 'Poppins';font-size: 32px;
+}
+.left-box p{
+    color: rgb(196, 196, 196);
+    font-family: "lora-regular", serif;
+    font-size: 1.3rem;
+}
+.left-box span{
+    color: rgb(196, 196, 196);
+}
+
+.right-box h2{
+    letter-spacing: 0.25rem;
+    font-size: 1.8em;
+    color:rgb(111, 156, 163);
+    font-family: 'Poppins';font-size: 32px;
+}
+.right-box span{
+    color: rgb(196, 196, 196);
+}
+
+.right-box h3{
+    color: rgb(255, 255, 255);
+}
+
+.two-button{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    
+}
+.two-button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    color: var(--main-text-color);
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: -1rem 3rem 0rem 2rem;
+}
+.button:hover {
+    border: 2px solid #c9743c;
+    color: #fc7f0b;
+    transition: 0.6s;
+}
+
+
+@media screen and (max-width:768px){
+    .content1 h2{
+        text-align: center;
+    }
+    .c-row {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .container{
+        display: block;
+        
+    }
+    .left-box{
+        color: var(--main-text-color);
+        width: 80%;
+    }
+    .left-box h2{
+        text-align: center;
+    }
+    .right-box{
+        color: var(--main-text-color);
+        width: 80%;
+    }
+    .right-box h2{
+        text-align: center;
+        margin-top: 80px;
+    }
+    .two-button{
+        display: block;
+    }
+    .two-button a{
+        width: 80%;
+    }
+    .two-button .button2{
+        margin-top: 20px;
+    }
+}

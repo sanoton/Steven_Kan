@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Steven Kan">
+	<title>Steven Kan's Profolio</title>
+	<style>
+		.grid-cotainer{
+			display: grid;
+			grid-gap: 50px 100px;
+			grid-template-columns: auto auto auto;
+			/* background-color: lavender; */
+			padding: 10px; 
+		}
+		.grid-item{
+			/* Cited: https://images.unsplash.com/photo-1445112098124-3e76dd67983c?ix
+					  lib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80*/
+			background-image: url("./image/grid_sea_background.jpeg");
+			border: 2px solid;
+			padding: 20px;
+			font-size: 20px;
+			text-align: left;
+		}
+
+		main{
+			/* Cited: https://www.smartertravel.com/uploads/2020/03/ST_ZoomBackground_
+				          Beach03.jpg 
+			*/
+		  	background-image: url("./image/sea_background.jpg");
+			background-size: 100%;
+			border: var(--solid-frame);
+			margin: 5px;
+		}
+		footer{
+			/* Cited: https://newinceptions.com/wp-content/images/footer/
+					  Background/Footer-Background2.png
+			*/
+			background-image: url("./image/footer_background.png");
+			background-size: 100%;
+			border: var(--solid-frame);
+			/*margin: 5px;*/
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<center> <h1> Steven Kan's Website</h1></center>
+		<h3><a href="./index.html">Back to home page</a></h3>	
+	</header>
+	<main>
+		<picture>
+			<img src="./image/steven.png" alt="Steven Kan's selfie">
+		</picture>
+		<ul class="grid-container" id ="myGrids">
+			<li class="grid-item" id="education">
+			Educational Background
+			<ul>
+				<li>Fushing Private School(Elementary and Middle School) in Taipei, Taiwan.</li> 
+				<li>Walnut High School in Los Angeles, California.</li> 
+				<li>University of California, San Diego.</li>
+			</ul>
+			</li>
+			<li class="grid-item" id="skills">
+			Skills
+			<ul>
+				<li>Data Analytics: Python(Pandas)</li>
+				<li>Font-End Language: HTML, CSS, JavaScript</li>
+				<li>Back-End Langauge: SQL</li>
+				<li>Programming Languages: C/C++, Java, Python, GO</li>
+			</ul>
+			</li>
+			<li class="grid-item" id="bio">
+			Bio
+			<ul>
+				<li> 25 years old Asian male</li>
+				<li> Fluent in both English and Chinese Mandarine</li>
+				<li> Curretly senior-year undergrad majoring in Computer Science at UCSD</li>
+				<li> Love both indoor and outdoor activities: video games and workout</li>
+			</ul>
+			</li>
+			<li class="grid-item" id="interest">
+			Interest
+			<ul>
+				<li>I would like to design useful and entertaining apps in the future.</li>
+			</ul>
+			</li>
+			<li class="grid-item" id="email">
+			Email
+			<ul>
+				<li> UCSD/GitHub email: s1kan@ucsd.edu </li>
+			</ul>
+			</li>
+		</ul>
+	</main>
+	<footer>
+		<button id="new">Fresh the current page</button>
+	</footer>
+	<script>
+		function refresh(){
+			location.reload();
+		}
+		document.getElementById('new').addEventListener('click', refresh);
+	</script>
+</body>
+</html>
